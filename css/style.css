@@ -59,6 +59,7 @@ a {
 /*start header*/
 header {
     background-color: #2b2a4c;
+    height: 54px;
 }
 
 header .container {
@@ -69,11 +70,14 @@ header .container {
 
 header .container .logo .name {
     font-family: 'Pacifico', cursive;
-    margin-top: 10px;
     font-size: 25px;
     color: #B31312;
 }
-
+@media (max-width: 767px) {
+    .container .con {display: none;
+    }
+    nav ul { margin-left: 50px;}
+}
 header .container nav {
     margin: auto;
 }
@@ -116,12 +120,16 @@ header .container .search {
 
 /*end header*/
 /*landing*/
-.landing {}
 
 .landing .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+@media (max-width: 767px) {
+    .landing .container{flex-direction: column;}
+    .landing .text{margin-top: 30px;}
+    .landing .imag {margin-top: 25px;}
 }
 
 .landing .text {
